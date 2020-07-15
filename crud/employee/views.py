@@ -79,7 +79,7 @@ def update(request, id):
         form.save()
         return redirect("/show")
     return render(request, 'edit.html', {'employee': employee})
-
+#to delete the record
 @login_required(login_url='login')
 def destroy(request, id):
     employee = Employee.objects.get(id=id)
